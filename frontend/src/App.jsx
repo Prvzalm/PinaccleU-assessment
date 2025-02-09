@@ -43,6 +43,7 @@ export default function TaskManager() {
   const completeTask = async (id) => {
     await axios.patch(`${API_URL}/${id}/complete`);
     fetchTasks();
+    setSelectedTask(null)
   };
 
   const taskDistributionData = {
